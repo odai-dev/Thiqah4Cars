@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ثقة كار - شراء وبيع السيارات المستعملة بكل ثقة</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d6e3ff",
+                        "secondary-container": "#6cf8bb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#261a00",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface-variant": "#44474d",
+                        "tertiary-container": "#261a00",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed": "#002113",
+                        "on-surface": "#0b1c30",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "inverse-primary": "#b9c7e4",
+                        "on-primary-fixed-variant": "#39475f",
+                        "surface": "#f8f9ff",
+                        "on-tertiary-container": "#a87d00",
+                        "surface-dim": "#cbdbf5",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#00714d",
+                        "on-primary-fixed": "#0d1c32",
+                        "outline": "#75777e",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "primary-container": "#0d1c32",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-container": "#76849f",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-background": "#0b1c30",
+                        "surface-container-low": "#eff4ff",
+                        "surface-variant": "#d3e4fe",
+                        "primary": "#000000",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-tint": "#515f78",
+                        "inverse-surface": "#213145",
+                        "secondary": "#006c49",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary-fixed-dim": "#4edea3",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "outline-variant": "#c5c6cd",
+                        "tertiary-fixed": "#ffdf9f",
+                        "thiqah-primary": "#075D3E",
+                        "thiqah-secondary": "#DCB04A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "40px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["IBM Plex Sans"],
+                        "body-md": ["IBM Plex Sans"],
+                        "display-lg": ["IBM Plex Sans"],
+                        "label-md": ["IBM Plex Sans"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "title-lg": ["IBM Plex Sans"],
+                        "headline-lg": ["IBM Plex Sans"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes revealOnScroll {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .reveal-section {
+            opacity: 0;
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .card-hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .staggered-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .staggered-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-section, .staggered-reveal').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Interactive Report Tab Switching
+            const tabButtons = document.querySelectorAll('.report-tab-btn');
+            const tabContents = {
+                engine: [
+                    { name: 'أداء المحرك وصوت التشغيل', status: 'warning' },
+                    { name: 'تسريبات الزيوت أو السوائل', status: 'success' },
+                    { name: 'حالة البواجي والسيور', status: 'danger' }
+                ],
+                body: [
+                    { name: 'سلامة الشاصيه من اللحام أو التعديل', status: 'success' },
+                    { name: 'حالة الدهان الخارجي والصدمات', status: 'warning' },
+                    { name: 'سلامة الزجاج والمرايا', status: 'success' }
+                ],
+                electrical: [
+                    { name: 'أداء التكييف والتبريد', status: 'success' },
+                    { name: 'عمل الحساسات والكاميرات', status: 'success' },
+                    { name: 'حالة البطارية ونظام التشغيل الدينامو', status: 'warning' }
+                ]
+            };
+
+            const reportList = document.getElementById('report-list');
+
+            if (reportList) {
+                const renderItems = (items) => {
+                    reportList.innerHTML = '';
+                    items.forEach((item, idx) => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-center justify-between p-4 bg-surface rounded-lg opacity-0 transform translate-y-4 transition-all duration-300 ease-out';
+                        
+                        let statusClass = '';
+                        if (item.status === 'success') statusClass = 'bg-green-500 shadow-[0_0_10px_rgba(16,185,129,0.6)]';
+                        else if (item.status === 'warning') statusClass = 'bg-thiqah-secondary shadow-[0_0_10px_rgba(220,176,74,0.6)]';
+                        else if (item.status === 'danger') statusClass = 'bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]';
+                        
+                        li.innerHTML = `
+                            <span class="font-title-lg text-on-surface">${item.name}</span>
+                            <span class="w-4 h-4 rounded-full ${statusClass}"></span>
+                        `;
+                        reportList.appendChild(li);
+                        
+                        // Staggered fade in
+                        setTimeout(() => {
+                            li.classList.remove('opacity-0', 'translate-y-4');
+                        }, idx * 100);
+                    });
+                };
+
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        tabButtons.forEach(b => {
+                            b.classList.remove('text-thiqah-primary', 'border-b-2', 'border-thiqah-primary');
+                            b.classList.add('text-on-surface-variant');
+                        });
+                        btn.classList.add('text-thiqah-primary', 'border-b-2', 'border-thiqah-primary');
+                        btn.classList.remove('text-on-surface-variant');
+                        
+                        const tab = btn.dataset.tab;
+                        if (tab && tabContents[tab]) {
+                            renderItems(tabContents[tab]);
+                        }
+                    });
+                });
+            }
+
+            // Simple CTA Feedback
+            const ctaForm = document.querySelector('form');
+            if (ctaForm) {
+                const ctaButton = ctaForm.querySelector('button');
+                const ctaInput = ctaForm.querySelector('input');
+                if (ctaButton && ctaInput) {
+                    ctaForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                    });
+                    ctaButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const phone = ctaInput.value.strip ? ctaInput.value.strip() : ctaInput.value.trim();
+                        if (!phone) {
+                            ctaInput.focus();
+                            ctaInput.classList.add('ring-2', 'ring-red-500');
+                            setTimeout(() => ctaInput.classList.remove('ring-red-500'), 2000);
+                            return;
+                        }
+                        
+                        const originalText = ctaButton.innerText;
+                        ctaButton.innerText = 'جاري الإرسال...';
+                        ctaButton.disabled = true;
+                        
+                        setTimeout(() => {
+                            ctaButton.innerText = 'تم الإرسال بنجاح!';
+                            ctaButton.classList.replace('bg-thiqah-secondary', 'bg-green-600');
+                            ctaInput.value = '';
+                            
+                            setTimeout(() => {
+                                ctaButton.innerText = originalText;
+                                ctaButton.classList.replace('bg-green-600', 'bg-thiqah-secondary');
+                                ctaButton.disabled = false;
+                            }, 3000);
+                        }, 1500);
+                    });
+                }
+            }
+        });
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-md">
+    <!-- TopNavBar -->
+    <nav class="bg-surface shadow-sm docked full-width top-0 z-50 sticky">
+        <div
+            class="flex flex-row-reverse justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <a class="flex items-center gap-2" href="#">
+                <img src="assets/logo.png" alt="ثقة كار" class="h-12 w-auto">
+            </a>
+            <div class="hidden md:flex items-center gap-gutter flex-row-reverse">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
+                    href="#">سوق السيارات</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
+                    href="#">بيع سيارة</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
+                    href="#">فحص خارجي</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
+                    href="#">من نحن</a>
+            </div>
+            <button
+                class="bg-thiqah-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded border border-transparent hover:opacity-90 transition-opacity">
+                تسجيل الدخول
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+        class="relative w-full overflow-hidden bg-surface-container-high py-20 px-margin-mobile md:px-margin-desktop flex items-center justify-center min-h-[614px]">
+        <div class="absolute inset-0 z-0">
+            <img alt="Professional high-quality photograph of a modern car on a clean surface, corporate lighting, conveying trust and premium automotive service, deep navy background accents."
+                class="w-full h-full object-cover opacity-30"
+                data-alt="A professional high-quality photograph of a modern, sleek car positioned perfectly in a well-lit showroom environment. The lighting is corporate and bright, emphasizing trust and high-end automotive retail. The background is subtly blurred with deep navy and metallic tones, aligning with a premium, reliable brand aesthetic. The scene conveys security and high-value transactional safety in the automotive market."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtDk3l9-H4mhZ9iusjd_UklKLG6aBsRy_ckjuL73uBj_M6mKCulU15KqddJs22Y6gqIq_5hfOouV2FQo6noP2HtQ2ZeOScmurMWUWO2XsgXk0O82y65rrrFvAnttWPvKHkyXl8kJVwk1U8WAiKfYTxQWanf7tPl7SxbJnwGJ8VYDdWgBEJ1NHNCorQYDVqPJmCmhzUpWbjUNK6gQitVjkCwA8nA9yew1C2bfTyJ8f7PnsOLwNEqPwRJaBpJl2oUdCOU03oNkuP7bfB">
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto flex flex-col items-center text-center gap-stack-md">
+            <h1 class="font-display-lg text-display-lg text-thiqah-primary max-w-3xl animate-fade-in-up">شراء وبيع السيارات
+                المستعملة بكل ثقة في اليمن</h1>
+            <p
+                class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl animate-fade-in-up [animation-delay:200ms]">
+                الوسيط الموثوق للسيارات المعتمدة في اليمن</p>
+            <div
+                class="flex flex-col md:flex-row gap-stack-sm mt-stack-md w-full justify-center animate-fade-in-up [animation-delay:400ms]">
+                <button
+                    class="bg-thiqah-secondary text-on-primary font-label-md text-label-md px-6 py-3 rounded border border-transparent shadow-sm hover:opacity-90 transition-opacity">تصفح
+                    السيارات المعتمدة</button>
+                <button
+                    class="bg-thiqah-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded border border-transparent shadow-sm hover:opacity-90 transition-opacity">بيع
+                    سيارتك</button>
+                <button
+                    class="bg-transparent text-thiqah-primary font-label-md text-label-md px-6 py-3 rounded border border-thiqah-primary hover:bg-surface-variant transition-colors">اطلب
+                    فحص خارجي</button>
+            </div>
+        </div>
+    </header>
+    <!-- How it Works -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface">
+        <div class="max-w-container-max mx-auto">
+            <h2 class="font-headline-lg text-headline-lg text-thiqah-primary text-center mb-stack-lg">كيف نعمل؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="flex flex-col items-center text-center p-stack-md bg-surface-container-lowest rounded-lg shadow-sm border border-surface-container-high staggered-reveal">
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-stack-sm text-thiqah-primary">
+                        <span class="material-symbols-outlined text-3xl">post_add</span>
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-on-surface mb-base">قدم طلبك</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">ارفع تفاصيل سيارتك بسهولة.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-stack-md bg-surface-container-lowest rounded-lg shadow-sm border border-surface-container-high relative staggered-reveal [transition-delay:200ms]">
+                    <div
+                        class="hidden md:block absolute right-full top-1/3 transform -translate-y-1/2 translate-x-1/2 w-8 h-[2px] bg-outline-variant">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-stack-sm text-thiqah-primary">
+                        <span class="material-symbols-outlined text-3xl fill-icon">verified</span>
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-on-surface mb-base">فحص واعتماد</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">فريقنا المتنقل يفحص السيارة ويصدر شهادة
+                        ثقة.</p>
+                </div>
+                <div
+                    class="flex flex-col items-center text-center p-stack-md bg-surface-container-lowest rounded-lg shadow-sm border border-surface-container-high relative staggered-reveal [transition-delay:400ms]">
+                    <div
+                        class="hidden md:block absolute right-full top-1/3 transform -translate-y-1/2 translate-x-1/2 w-8 h-[2px] bg-outline-variant">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-stack-sm text-thiqah-primary">
+                        <span class="material-symbols-outlined text-3xl">handshake</span>
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-on-surface mb-base">بيع آمن</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">نتولى عملية البيع ونضمن حقك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low reveal-section">
+        <div class="max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row-reverse border border-surface-container-high group hover:shadow-md transition-shadow">
+                    <div class="md:w-2/5 h-48 md:h-auto overflow-hidden">
+                        <img alt="Row of clean certified used cars"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A meticulously lined up row of clean, modern cars in a brightly lit outdoor dealership lot. The atmosphere is professional and secure, highlighting a trusted marketplace for certified pre-owned vehicles. The lighting is crisp daylight, emphasizing the pristine condition of the cars. The overarching style aligns with a premium, transparent automotive retail experience."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Z0tPiuzJpBG9tsbGXX22_UnV1KFatgTlUJAZdWFqFkHS29f39nXC8Rx3HMZY-Y77puQ4cS782omLYzlaRLyNXEHW7FrNvDCktXynk6tmv9G5emdBz41csyhC-tVJ_dZDzSETD5zKKPc7rVclRWBaJ8iVOVzVGQ1NIWZKlpDllQ1pAtDAMUbECaxoopbeS32ugSrJsTtMbB7wI6FxQ_lLOpYN9oOPhdViKlBoGcpJr67sZgA9ycKOaKfapfOqfxV-zUsqav5gPxML">
+                    </div>
+                    <div class="p-stack-md flex flex-col justify-center md:w-3/5">
+                        <h3 class="font-title-lg text-title-lg text-thiqah-primary mb-base">سوق السيارات المعتمدة</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">تصفح مئات السيارات
+                            المفحوصة والمضمونة.</p>
+                        <a class="text-thiqah-primary font-label-md text-label-md flex items-center gap-1 hover:underline w-fit"
+                            href="#">
+                            <span class="">تصفح السوق</span>
+                            <span class="material-symbols-outlined text-sm">arrow_left_alt</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row-reverse border border-surface-container-high group hover:shadow-md transition-shadow">
+                    <div class="md:w-2/5 h-48 md:h-auto overflow-hidden">
+                        <img alt="Mechanic inspecting a car engine"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A professional mechanic in clean uniform meticulously inspecting the engine bay of a modern car. The lighting is bright and focused, conveying transparency, diligence, and trust in the inspection process. The background is a clean, well-equipped garage setting, reflecting the high standards of a premium on-demand inspection service."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG5hwEW4qRNLrmkSlXpjSucVECOEWfAlBWa1xQmQP5-igKTJSWbU-39B6mYjQnvhNZGd_h1E5lmOKOtc4E2umvU4OvC2MqvRKrKpkP1mZOB_k6fXX1rvxbwMhbFGpTPFtwDqpMrVC9r6d61AdTcIbRzXHCuhPfdAzAuYhBdp-1AxS9AHy7VBVYVs72-2Hkr9X9G5Xr4zKNl13fvMzsJkQczxeNxolxu7wolPF01WoeMQzWvDRVoKgxWLWWDdyOvS07kKyvTa_eB8W0">
+                    </div>
+                    <div class="p-stack-md flex flex-col justify-center md:w-3/5">
+                        <h3 class="font-title-lg text-title-lg text-thiqah-primary mb-base">فحص عند الطلب</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">وجدت سيارة في مكان آخر؟
+                            اطلب فريقنا لفحصها لك قبل الشراء.</p>
+                        <a class="text-thiqah-primary font-label-md text-label-md flex items-center gap-1 hover:underline w-fit"
+                            href="#">
+                            <span class="">اطلب فحص</span>
+                            <span class="material-symbols-outlined text-sm">arrow_left_alt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Cars -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface reveal-section">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-stack-lg">
+                <h2 class="font-headline-lg text-headline-lg text-thiqah-primary">سيارات مميزة معتمدة</h2>
+                <a class="hidden md:flex text-thiqah-primary font-label-md text-label-md items-center gap-1 hover:underline"
+                    href="#">
+                    <span class="">عرض الكل</span>
+                    <span class="material-symbols-outlined text-sm">arrow_left_alt</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Car Card 1 -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow relative card-hover-lift">
+                    <div
+                        class="absolute top-2 right-2 bg-thiqah-secondary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm z-10 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm fill-icon">verified</span>
+                        مفحوصة ومعتمدة
+                    </div>
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Toyota Corolla 2022" class="w-full h-full object-cover"
+                            data-alt="A clean, modern white Toyota Corolla 2022 parked securely on a paved surface. The lighting is bright and professional, highlighting the vehicle's pristine condition suitable for a certified pre-owned listing. The image style is straightforward and high-quality, ensuring maximum transparency for potential buyers in a trusted automotive marketplace."
+                            src="assets/car1.png">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title-lg text-title-lg text-on-surface mb-2">تويوتا كورولا 2022</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-headline-md text-headline-md text-thiqah-primary font-bold">$15,000</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 border-t border-surface-container-high pt-4">
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">speed</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">45,000 كم</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">calendar_month</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">2022</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span
+                                    class="material-symbols-outlined text-outline text-sm mb-1">settings_input_component</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">أوتوماتيك</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Card 2 -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow relative card-hover-lift">
+                    <div
+                        class="absolute top-2 right-2 bg-thiqah-secondary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm z-10 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm fill-icon">verified</span>
+                        مفحوصة ومعتمدة
+                    </div>
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Hyundai Tucson 2021" class="w-full h-full object-cover"
+                            data-alt="A sleek, grey Hyundai Tucson 2021 positioned professionally outdoors under clear daylight. The shot is well-composed and sharp, emphasizing the vehicle's reliable and verified status within a premium used car marketplace. The overall tone is secure, modern, and highly transparent for prospective buyers."
+                            src="assets/car2.png">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title-lg text-title-lg text-on-surface mb-2">هيونداي توسان 2021</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-headline-md text-headline-md text-thiqah-primary font-bold">$18,500</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 border-t border-surface-container-high pt-4">
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">speed</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">60,000 كم</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">calendar_month</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">2021</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span
+                                    class="material-symbols-outlined text-outline text-sm mb-1">settings_input_component</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">أوتوماتيك</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Card 3 -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow relative card-hover-lift">
+                    <div
+                        class="absolute top-2 right-2 bg-thiqah-secondary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm z-10 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm fill-icon">verified</span>
+                        مفحوصة ومعتمدة
+                    </div>
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Kia Sportage 2023" class="w-full h-full object-cover"
+                            data-alt="A pristine, modern Kia Sportage 2023 captured in a high-quality, brightly lit corporate automotive photography style. The image highlights the car's exterior flawlessly, supporting its certified pre-owned label. The setting is neat and professional, reinforcing the trust and quality associated with a premium vehicle trading platform."
+                            src="assets/car3.png">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-title-lg text-title-lg text-on-surface mb-2">كيا سبورتاج 2023</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-headline-md text-headline-md text-thiqah-primary font-bold">$22,000</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 border-t border-surface-container-high pt-4">
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">speed</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">25,000 كم</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span class="material-symbols-outlined text-outline text-sm mb-1">calendar_month</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">2023</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-surface-container-low rounded p-2 card-hover-lift">
+                                <span
+                                    class="material-symbols-outlined text-outline text-sm mb-1">settings_input_component</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">أوتوماتيك</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="md:hidden mt-stack-md text-thiqah-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:underline w-full p-3 border border-thiqah-primary rounded"
+                href="#">
+                <span class="">عرض كل السيارات</span>
+            </a>
+        </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="py-stack-lg bg-thiqah-primary text-on-primary text-center">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-display-lg text-thiqah-secondary mb-2">+100</div>
+                    <div class="font-title-lg">سيارة مفحوصة</div>
+                </div>
+                <div>
+                    <div class="font-display-lg text-thiqah-secondary mb-2">%100</div>
+                    <div class="font-title-lg">شفافية مطلقة</div>
+                </div>
+                <div>
+                    <div class="font-display-lg text-thiqah-secondary mb-2">5</div>
+                    <div class="font-title-lg">مراكز فحص معتمدة</div>
+                </div>
+                <div>
+                    <div class="font-display-lg text-thiqah-secondary mb-2">24/7</div>
+                    <div class="font-title-lg">دعم فني</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Interactive Report Preview -->
+    <section class="py-stack-lg bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <div class="text-center mb-stack-lg">
+                <h2 class="font-headline-lg text-thiqah-primary mb-4">تقرير فحص رقمي تفاعلي</h2>
+                <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">نعتمد نظام الإشارات المرورية (أخضر، أصفر، أحمر) لتقييم حالة السيارة بشفافية ووضوح، لتتخذ قرارك بكل ثقة.</p>
+            </div>
+            
+            <div class="bg-surface-container-lowest rounded-xl shadow-lg border border-surface-container-high overflow-hidden flex flex-col md:flex-row">
+                <div class="bg-thiqah-primary text-on-primary p-8 md:w-1/3 flex flex-col items-center justify-center text-center">
+                    <div class="relative w-32 h-32 mb-6">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="8"></circle>
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#10B981" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="42" class="transition-all duration-1000 ease-out"></circle>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center flex-col">
+                            <span class="font-display-lg text-3xl font-bold">85%</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-md mb-2">الحالة العامة</h3>
+                    <p class="font-body-md opacity-80">ممتازة (مفحوصة بالكامل)</p>
+                </div>
+                
+                <div class="p-8 md:w-2/3">
+                    <div class="flex border-b border-surface-container-high mb-6 overflow-x-auto">
+                        <button class="report-tab-btn px-6 py-3 font-title-lg text-thiqah-primary border-b-2 border-thiqah-primary whitespace-nowrap" data-tab="engine">المحرك</button>
+                        <button class="report-tab-btn px-6 py-3 font-title-lg text-on-surface-variant hover:text-thiqah-primary whitespace-nowrap" data-tab="body">الهيكل</button>
+                        <button class="report-tab-btn px-6 py-3 font-title-lg text-on-surface-variant hover:text-thiqah-primary whitespace-nowrap" data-tab="electrical">الكهرباء</button>
+                    </div>
+                    
+                    <ul id="report-list" class="space-y-4">
+                        <li class="flex items-center justify-between p-4 bg-surface rounded-lg">
+                            <span class="font-title-lg text-on-surface">أداء المحرك وصوت التشغيل</span>
+                            <span class="w-4 h-4 rounded-full bg-thiqah-secondary shadow-[0_0_10px_rgba(220,176,74,0.6)]"></span>
+                        </li>
+                        <li class="flex items-center justify-between p-4 bg-surface rounded-lg">
+                            <span class="font-title-lg text-on-surface">تسريبات الزيوت أو السوائل</span>
+                            <span class="w-4 h-4 rounded-full bg-green-500 shadow-[0_0_10px_rgba(16,185,129,0.6)]"></span>
+                        </li>
+                        <li class="flex items-center justify-between p-4 bg-surface rounded-lg">
+                            <span class="font-title-lg text-on-surface">حالة البواجي والسيور</span>
+                            <span class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comparison Table Section -->
+    <section class="py-stack-lg bg-surface px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <h2 class="font-headline-lg text-thiqah-primary text-center mb-stack-lg">لماذا ثقة كار؟</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-center border-collapse bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-surface-container-high">
+                    <thead>
+                        <tr class="bg-thiqah-primary text-on-primary font-title-lg">
+                            <th class="p-4 w-1/3 border-b border-surface-container-high text-right">الميزة</th>
+                            <th class="p-4 w-1/3 bg-thiqah-primary-light border-b border-surface-container-high">ثقة كار</th>
+                            <th class="p-4 w-1/3 border-b border-surface-container-high opacity-80">الأسواق التقليدية</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-body-lg text-on-surface">
+                        <tr class="border-b border-surface-container-high hover:bg-surface transition-colors">
+                            <td class="p-4 font-bold text-right">فحص السيارات</td>
+                            <td class="p-4 bg-green-50/50 text-thiqah-primary"><span class="material-symbols-outlined text-3xl">check_circle</span></td>
+                            <td class="p-4 text-on-surface-variant"><span class="material-symbols-outlined text-3xl">cancel</span></td>
+                        </tr>
+                        <tr class="border-b border-surface-container-high hover:bg-surface transition-colors">
+                            <td class="p-4 font-bold text-right">شفافية التسعير</td>
+                            <td class="p-4 bg-green-50/50 text-thiqah-primary"><span class="material-symbols-outlined text-3xl">check_circle</span></td>
+                            <td class="p-4 text-on-surface-variant"><span class="material-symbols-outlined text-3xl">cancel</span></td>
+                        </tr>
+                        <tr class="border-b border-surface-container-high hover:bg-surface transition-colors">
+                            <td class="p-4 font-bold text-right">ضمان الحقوق</td>
+                            <td class="p-4 bg-green-50/50 text-thiqah-primary"><span class="material-symbols-outlined text-3xl">check_circle</span></td>
+                            <td class="p-4 text-on-surface-variant"><span class="material-symbols-outlined text-3xl">cancel</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface transition-colors">
+                            <td class="p-4 font-bold text-right">راحة البال والوقت</td>
+                            <td class="p-4 bg-green-50/50 text-thiqah-primary"><span class="material-symbols-outlined text-3xl">check_circle</span></td>
+                            <td class="p-4 text-on-surface-variant"><span class="material-symbols-outlined text-3xl">cancel</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-stack-lg bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <h2 class="font-headline-lg text-thiqah-primary text-center mb-stack-lg">قصص نجاح عملائنا</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-surface-container-high relative">
+                    <span class="material-symbols-outlined absolute top-6 right-6 text-5xl text-thiqah-secondary opacity-20">format_quote</span>
+                    <div class="flex text-thiqah-secondary mb-4">
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                    </div>
+                    <p class="font-body-lg text-on-surface-variant italic mb-6">"وفرت علي ثقة كار عناء السفر إلى صنعاء للبحث عن سيارة. اشتريت سيارتي بناءً على تقرير فحصهم الدقيق والمفصل، وكانت السيارة مطابقة تماماً للوصف."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-thiqah-primary text-on-primary rounded-full flex items-center justify-center font-title-lg">م</div>
+                        <div>
+                            <h4 class="font-title-lg text-thiqah-primary">محمد الصنعاني</h4>
+                            <span class="font-label-md text-on-surface-variant">مشتري - خدمة فحص عن بعد</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-surface-container-high relative">
+                    <span class="material-symbols-outlined absolute top-6 right-6 text-5xl text-thiqah-secondary opacity-20">format_quote</span>
+                    <div class="flex text-thiqah-secondary mb-4">
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                    </div>
+                    <p class="font-body-lg text-on-surface-variant italic mb-6">"كموظفة، لم يكن لدي الوقت أو المعرفة الكافية للنزول للحراج. ثقة كار جعلت تجربة شراء سيارتي الأولى آمنة وبعيدة عن أي احتيال. شكراً لشفافيتكم."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-thiqah-primary text-on-primary rounded-full flex items-center justify-center font-title-lg">س</div>
+                        <div>
+                            <h4 class="font-title-lg text-thiqah-primary">سارة أحمد</h4>
+                            <span class="font-label-md text-on-surface-variant">مشتري - سيارة معتمدة</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-surface-container-high relative">
+                    <span class="material-symbols-outlined absolute top-6 right-6 text-5xl text-thiqah-secondary opacity-20">format_quote</span>
+                    <div class="flex text-thiqah-secondary mb-4">
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star</span>
+                        <span class="material-symbols-outlined fill-icon">star_half</span>
+                    </div>
+                    <p class="font-body-lg text-on-surface-variant italic mb-6">"بعت سيارتي عبر المنصة بكل سهولة وبسعر عادل حسب حالتها الحقيقية. تقييمهم العادل أفادني وأفاد المشتري. تجربة احترافية جداً."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-thiqah-primary text-on-primary rounded-full flex items-center justify-center font-title-lg">ع</div>
+                        <div>
+                            <h4 class="font-title-lg text-thiqah-primary">عبدالله طاهر</h4>
+                            <span class="font-label-md text-on-surface-variant">بائع</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-thiqah-primary to-[#05402A] text-on-primary px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-display-lg mb-6">هل وجدت سيارة خارج المنصة وتريد فحصها؟</h2>
+            <p class="font-body-lg mb-8 opacity-90">لا تشتري السمك في الماء! اطلب خدمة "الفحص عند الطلب" وسيتوجه فريقنا المتخصص لفحصها أينما كانت وإصدار تقرير رقمي مفصل لك.</p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="text" placeholder="رقم هاتفك للتواصل..." class="px-6 py-4 rounded-lg text-on-surface font-body-lg w-full md:w-96 focus:ring-2 focus:ring-thiqah-secondary outline-none border-none">
+                <button type="button" class="bg-thiqah-secondary hover:bg-[#C29A3F] text-on-primary px-8 py-4 rounded-lg font-title-lg transition-colors whitespace-nowrap shadow-lg">اطلب فحص الآن</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary-container text-on-primary-container font-body-md text-body-md full-width">
+        <div
+            class="flex flex-col md:flex-row-reverse justify-between items-center py-stack-lg px-margin-desktop w-full max-w-container-max mx-auto gap-gutter">
+            <div class="font-headline-md text-headline-md text-on-primary mb-4 md:mb-0">
+                ثقة كار
+            </div>
+            <div class="flex flex-wrap justify-center gap-gutter text-on-primary-fixed-variant mb-4 md:mb-0">
+                <a class="hover:text-secondary-container transition-colors" href="#">سياسة الخصوصية</a>
+                <a class="hover:text-secondary-container transition-colors" href="#">الشروط والأحكام</a>
+                <a class="hover:text-secondary-container transition-colors" href="#">الأسئلة الشائعة</a>
+                <a class="hover:text-secondary-container transition-colors" href="#">تواصل معنا</a>
+            </div>
+            <div class="text-on-primary-fixed-variant text-center md:text-left">
+                جميع الحقوق محفوظة لشركة ثقة كار © 2024
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
